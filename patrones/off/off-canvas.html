@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title>Off canvas</title>
+	<style type="text/css">
+	*{
+
+		margin: 0;
+		padding: 0;
+	}
+
+	.verde_a{
+
+			background: #70aa39;
+		}
+
+		.verde_b{
+
+			background: #97c335;
+		}
+
+		.verde_c{
+
+			background: #cde1a7;
+		}
+
+		.canvas{
+
+			width: 100%;
+			overflow: hidden;
+			position: relative;
+
+		}
+		.canvas-header{
+
+			background: #141f23;
+			padding: 20px;
+			color:white;
+			position: relative;
+			
+			line-height: 10px;
+
+			
+		}
+		.header-button{
+
+			background: orange;
+			border-radius: 6px;
+			color:white;
+			padding: 5px;
+			display: none;
+			position: absolute;
+			right: 20px;
+			top:10px;
+		}
+
+		.but-is-active{
+
+			display: block;
+		}
+
+		.header-logo{
+
+			text-transform: uppercase;
+			font-size: 18px;
+			margin:0;
+			text-shadow:0 0 10px #70aa39;
+			text-decoration: underline;
+
+		}
+
+		.main-menu{
+
+			padding:0;
+			position: absolute;
+			background: #141F23;
+			top:0;
+			left: -200px;
+			width: 200px;
+			-webkit-transition:.4s;
+			margin: 0;
+
+		}
+		
+		.main-menuintem{
+
+		    height: 50px;
+		    line-height: 50px;
+			text-align: center;
+		    -webkit-transition:.4s;
+		    list-style: none;
+
+
+		}
+
+		.main-menuintem:hover{
+
+			text-align: center;
+		   background: gray;
+
+		}
+
+
+		.main-menu-link{
+
+			color:white;
+			text-transform: uppercase;
+			text-decoration: none;
+			font-size: 14px;
+			display: block;
+			
+		}
+		.canvas-sidebar{
+
+			color:blue;
+			position: absolute;
+			right: -200px;
+			width: 200px;
+			top:0;
+			-webkit-transition:.4s;
+		}
+
+		.is-active{
+
+			left:0;
+		}
+
+		.is-activer{
+
+			right:0;
+		}
+
+
+@media screen and (min-width:767px){
+
+	.main-menu{
+
+		left: initial;
+		right: 0;
+		width:auto;
+		margin:0;
+	}
+
+	.main-menuintem{
+
+		display: inline-block;
+
+	}
+
+	
+
+	.header-button{
+
+		display: none;
+	}
+	.main-menu-link{
+
+		padding:0 20px;
+	}
+
+}
+
+
+	</style>
+</head>
+<body id="bo">
+
+	
+	<section class="canvas">
+
+		<header class="canvas-header verde_a is-cative"><h1 class="header-logo">Off Canvas</h1>
+			<button class="header-button but-is-active" id="show">Mostrar menu</button>
+
+			<button class="header-button" id="hide">Ocultar menu</button>
+			
+
+
+			<ul class="main-menu" id="menu">
+				<li class="main-menuintem"><a href="" class="main-menu-link">home</a></li>
+
+				<li class="main-menuintem"><a href="" class="main-menu-link">conferencias</a></li>
+
+				<li class="main-menuintem"><a href="" class="main-menu-link">directs</a></li>
+
+				<li class="main-menuintem"><a href="" class="main-menu-link">robust</a></li>
+			</ul>
+		</header>
+
+		<div class="canvas-main verde_b">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+
+
+		<div class="canvas-sidebar verde_c">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+		
+
+		
+	</section>
+	<script type="text/javascript" src="hammer.min.js"></script>
+
+		<script type="text/javascript" src="jquery.js"></script>
+
+	<script type="text/javascript">
+
+		var $showMenu = document.getElementById("show");
+
+		var $hideMenu = document.getElementById("hide");
+
+		 var $menu = document.getElementById("menu");
+
+		 $showMenu.addEventListener("click", sh);
+
+		 $hideMenu.addEventListener("click", sho);
+
+		 var $body = document.getElementById("bo");
+
+		 var body = new Hammer($body);
+
+		 body.on("panright",sh);
+		 body.on("panleft",sho);
+		 function sh(){
+		 	show.classList.remove("but-is-active");
+		 	hide.classList.add("but-is-active");
+		 	menu.classList.add("is-active");
+
+
+		 }
+
+		 function sho(){
+
+		 	show.classList.add("but-is-active");
+		 	hide.classList.remove("but-is-active");
+		 	menu.classList.remove("is-active");
+
+		 }
+
+	</script>
+
+</body>
+</html>

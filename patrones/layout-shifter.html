@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width">
+	<title>layout shifter</title>
+	<style type="text/css">
+	.verde_a{
+
+			background: #70aa39;
+		}
+
+		.verde_b{
+
+			background: #97c335;
+		}
+
+		.verde_c{
+
+			background: #cde1a7;
+		}
+
+		.shifter{
+
+			max-width: 1024px;
+			margin:0 auto;
+		}
+
+		.shifter-top{
+
+			margin-bottom: 20px;
+		}
+
+		.shifter-bottom{
+
+			padding:20px 0;
+			overflow: hidden;
+
+		}
+
+		.shifter-column{
+			width: 50%;
+			float:left;
+		}
+
+
+		@media screen and (max-width:1024px){
+
+			.shifter{
+
+				max-width: 900px;
+			}
+		}
+
+		@media screen and (max-width:767px){
+
+			.shifter{
+
+				max-width: 600px;
+			}
+		}
+
+		@media screen and (max-width:300px){
+
+			.shifter{
+
+				max-width: 300px;
+			}
+		}
+
+	</style>
+</head>
+<body>
+
+
+	<section class="shifter">
+
+		<div class="shifter-top verde_a">
+			<h1>layput shifter!</h1>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+
+		<div class="shifter-bottom verde_b">
+			<div class="shifter-column verde_a">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+
+			<div class="shifter-column verde_c">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+		</div>
+
+	</section>
+
+</body>
+</html>
